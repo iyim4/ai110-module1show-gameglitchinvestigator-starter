@@ -40,7 +40,7 @@ Describe your fixed game in numbered steps so a reader can follow along without 
 5. User can press New Game button to play again
 
 **Screenshot** *(optional)*: 
-![The fixed, winning game](.\game_win.png "Winning Game")
+![The fixed, winning game](game_win.png "Winning Game")
 
 ## 🧪 Test Results
 
