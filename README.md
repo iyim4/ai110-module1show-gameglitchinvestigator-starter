@@ -33,20 +33,31 @@ It wrote the code, ran away, and now the game is unplayable.
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. User enters a guess of 40, game hints the number is "Too Low"
+2. User enters a guess of 70, game hints the number is "Too High"
+3. Score updates correctly after each guess, with a higher score the faster the user guesses the correct number
+4. Game ends after the correct guess
+5. User can press New Game button to play again
 
-**Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
+**Screenshot** *(optional)*: 
+![The fixed, winning game](.\game_win.png "Winning Game")
 
 ## 🧪 Test Results
 
 ```
-# Paste your pytest output here, e.g.:
-# pytest tests/
-# ========================= X passed in 0.XXs =========================
+============================= test session starts ==============================
+platform linux -- Python 3.11.15, pytest-9.1.0, pluggy-1.6.0 -- /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+cachedir: .pytest_cache
+rootdir: /home/runner/work/ai110-module1show-gameglitchinvestigator-starter/ai110-module1show-gameglitchinvestigator-starter
+configfile: pytest.ini
+plugins: anyio-4.14.0
+collecting ... collected 3 items
+
+tests/test_game_logic.py::test_winning_guess PASSED                      [ 33%]
+tests/test_game_logic.py::test_guess_too_high PASSED                     [ 66%]
+tests/test_game_logic.py::test_guess_too_low PASSED                      [100%]
+
+============================== 3 passed in 0.01s ===============================
 ```
 
 ## 🚀 Stretch Features
