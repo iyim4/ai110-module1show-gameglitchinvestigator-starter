@@ -2,6 +2,8 @@ import random
 import streamlit as st
 from logic_utils import get_range_for_difficulty, parse_guess, check_guess, update_score
 
+# FIX: Refactored logic into logic_utils.py
+
 st.set_page_config(page_title="Glitchy Guesser", page_icon="🎮")
 
 st.title("🎮 Game Glitch Investigator")
@@ -69,6 +71,8 @@ with col3:
 if new_game:
     st.session_state.attempts = 0
     st.session_state.secret = random.randint(1, 100)
+    st.session_state.score = 0
+    # FIX: Fully reset session state using Claude AI
     st.session_state.history = []
     st.session_state.status = "playing"
     st.rerun()
@@ -90,6 +94,7 @@ if submit:
         st.error(err)
     else:
         st.session_state.history.append(guess_int)
+        # FIX: remove secret string cast
         secret = st.session_state.secret
 
         outcome, message = check_guess(guess_int, secret)

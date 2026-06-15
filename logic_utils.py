@@ -38,12 +38,14 @@ def check_guess(guess, secret):
 
     outcome examples: "Win", "Too High", "Too Low"
     """
+    # FIX: cast to int
     try:
         guess = int(guess)
         secret = int(secret)
     except (TypeError, ValueError):
         return None, "Invalid input: guess and secret must be numbers."
 
+    # FIX: correct hints and simplify logic
     if guess == secret:
         return "Win", "🎉 Correct!"
     elif guess > secret:
