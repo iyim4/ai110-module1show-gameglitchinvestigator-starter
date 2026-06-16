@@ -44,6 +44,8 @@ Describe your fixed game in numbered steps so a reader can follow along without 
 
 ## 🧪 Test Results
 
+Run from `tests/test_game_logic.py` using GitHub Actions. [Workflow Link](https://github.com/iyim4/ai110-module1show-gameglitchinvestigator-starter/actions).
+
 ```
 ============================= test session starts ==============================
 platform linux -- Python 3.11.15, pytest-9.1.0, pluggy-1.6.0 -- /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
@@ -51,15 +53,53 @@ cachedir: .pytest_cache
 rootdir: /home/runner/work/ai110-module1show-gameglitchinvestigator-starter/ai110-module1show-gameglitchinvestigator-starter
 configfile: pytest.ini
 plugins: anyio-4.14.0
-collecting ... collected 3 items
+collecting ... collected 41 items
 
-tests/test_game_logic.py::test_winning_guess PASSED                      [ 33%]
-tests/test_game_logic.py::test_guess_too_high PASSED                     [ 66%]
-tests/test_game_logic.py::test_guess_too_low PASSED                      [100%]
+tests/test_game_logic.py::test_winning_guess PASSED                      [  2%]
+tests/test_game_logic.py::test_guess_too_high PASSED                     [  4%]
+tests/test_game_logic.py::test_guess_too_low PASSED                      [  7%]
+tests/test_game_logic.py::test_easy_difficulty_range PASSED              [  9%]
+tests/test_game_logic.py::test_normal_difficulty_range PASSED            [ 12%]
+tests/test_game_logic.py::test_hard_difficulty_range PASSED              [ 14%]
+tests/test_game_logic.py::test_invalid_difficulty_defaults_to_normal PASSED [ 17%]
+tests/test_game_logic.py::test_parse_valid_integer PASSED                [ 19%]
+tests/test_game_logic.py::test_parse_valid_float PASSED                  [ 21%]
+tests/test_game_logic.py::test_parse_empty_string PASSED                 [ 24%]
+tests/test_game_logic.py::test_parse_non_numeric PASSED                  [ 26%]
+tests/test_game_logic.py::test_update_score_win PASSED                   [ 29%]
+tests/test_game_logic.py::test_update_score_too_high_even_attempt PASSED [ 31%]
+tests/test_game_logic.py::test_update_score_too_low PASSED               [ 34%]
+tests/test_game_logic.py::test_update_score_none_outcome PASSED          [ 36%]
+tests/test_game_logic.py::test_update_score_invalid_outcome PASSED       [ 39%]
+tests/test_game_logic.py::test_check_guess_with_negative_numbers PASSED  [ 41%]
+tests/test_game_logic.py::test_check_guess_with_zero PASSED              [ 43%]
+tests/test_game_logic.py::test_check_guess_negative_vs_positive PASSED   [ 46%]
+tests/test_game_logic.py::test_check_guess_with_very_large_numbers PASSED [ 48%]
+tests/test_game_logic.py::test_check_guess_string_inputs PASSED          [ 51%]
+tests/test_game_logic.py::test_check_guess_mixed_inputs_1 PASSED         [ 53%]
+tests/test_game_logic.py::test_check_guess_mixed_inputs_2 PASSED         [ 56%]
+tests/test_game_logic.py::test_difficulty_case_sensitivity PASSED        [ 58%]
+tests/test_game_logic.py::test_difficulty_empty_string PASSED            [ 60%]
+tests/test_game_logic.py::test_difficulty_with_whitespace PASSED         [ 63%]
+tests/test_game_logic.py::test_parse_negative_number PASSED              [ 65%]
+tests/test_game_logic.py::test_parse_negative_float PASSED               [ 68%]
+tests/test_game_logic.py::test_parse_zero PASSED                         [ 70%]
+tests/test_game_logic.py::test_parse_very_large_number PASSED            [ 73%]
+tests/test_game_logic.py::test_parse_leading_trailing_whitespace PASSED  [ 75%]
+tests/test_game_logic.py::test_parse_multiple_decimals PASSED            [ 78%]
+tests/test_game_logic.py::test_parse_just_decimal_point PASSED           [ 80%]
+tests/test_game_logic.py::test_parse_scientific_notation PASSED          [ 82%]
+tests/test_game_logic.py::test_update_score_high_attempt_number PASSED   [ 85%]
+tests/test_game_logic.py::test_update_score_zero_attempt PASSED          [ 87%]
+tests/test_game_logic.py::test_update_score_negative_current_score PASSED [ 90%]
+tests/test_game_logic.py::test_update_score_too_high_odd_attempt PASSED  [ 92%]
+tests/test_game_logic.py::test_update_score_negative_attempt_number PASSED [ 95%]
+tests/test_game_logic.py::test_update_score_outcome_case_sensitivity PASSED [ 97%]
+tests/test_game_logic.py::test_update_score_very_negative_final_score PASSED [100%]
 
-============================== 3 passed in 0.01s ===============================
+============================== 41 passed in 0.06s ==============================
 ```
 
 ## 🚀 Stretch Features
 
-- [ ] [If you choose to complete Challenge 4, describe the Enhanced UI changes here — a screenshot is optional]
+- Challenge 1: Advanced Edge-Case Testing. Added 38 more testcases, including edgecases.
