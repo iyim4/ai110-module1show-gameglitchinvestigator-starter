@@ -1,7 +1,5 @@
 # 💭 Reflection: Game Glitch Investigator
 
-Answer each question in 3 to 5 sentences. Be specific and honest about what actually happened while you worked. This is about your process, not trying to sound perfect.
-
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
@@ -12,7 +10,6 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 
 **Bug Reproduction Log**
 
-Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 |-------|-------------------|-----------------|------------------------|
@@ -51,7 +48,7 @@ Document at least 3 bugs you found. Add rows as needed.
 ## 4. What did you learn about Streamlit and state?
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
-  - Streamlit reruns the main Python file on every user interaction (button, text entry, etc), and uses a special dictionary called `session_state` as persistent storage between interactions. `session_state` ends when the page itself is reloaded. My friend, it appears that Python, or at least Streamlit, is *not* the ideal framework for interactive apps. [Try JavaScript & React](https://react.dev/)!
+  - Streamlit reruns the main Python file on every user interaction (button, text entry, etc), and uses a special dictionary called `session_state` as persistent storage between interactions. `session_state` ends when the page itself is reloaded. My friend, it appears that Python, or at least Streamlit, is *not* the ideal framework for interactive apps. [Try React](https://react.dev/)!
 
 ---
 

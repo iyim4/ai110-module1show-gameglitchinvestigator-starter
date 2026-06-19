@@ -25,9 +25,9 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- This game's purpose is to guess an random number.
+- Bugs included incorrect hints and a "stuck" lost game.
+- I fixed the hint logic and reset the state properly when the new game button is pressed.
 
 ## 📸 Demo Walkthrough
 
