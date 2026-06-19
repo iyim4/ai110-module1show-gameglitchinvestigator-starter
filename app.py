@@ -1,6 +1,22 @@
+"""Streamlit web application for the Glitchy Guesser number guessing game.
+
+This module implements a Streamlit-based guessing game where players attempt to
+predict a randomly selected number within a difficulty-dependent range. Features
+include adjustable difficulty levels, scoring based on efficiency and attempt count,
+and game state management through Streamlit session state.
+
+The core game logic is delegated to logic_utils.py for maintainability and testability.
+"""
 import random
+
 import streamlit as st
-from logic_utils import get_range_for_difficulty, parse_guess, check_guess, update_score
+
+from logic_utils import (
+    check_guess,
+    get_range_for_difficulty,
+    parse_guess,
+    update_score,
+)
 
 # FIX: Refactored logic into logic_utils.py
 
